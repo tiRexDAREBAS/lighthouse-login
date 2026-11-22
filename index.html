@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lighthouse — Sign in</title>
+  </head>
+  <body>
+    <main class="auth-layout">
+      <section class="auth-media" aria-label="Lighthouse view">
+        <img
+          src="/lighthouse.jpg"
+          alt="Lighthouse on a stone pier with a sailboat at sunset"
+          class="auth-media__img"
+        />
+        <span class="auth-media__credit">Photo by Alexandr Popadin</span>
+      </section>
+
+      <section class="auth-panel">
+        <div class="auth-panel__inner">
+          <header class="brand">
+            <span class="brand__badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 20h6" />
+                <path d="M10 20l1.2-11h1.6L14 20" />
+                <path d="M10.5 9h3l-.6-3h-1.8l-.6 3z" />
+                <path d="M6 5l3 1.5M18 5l-3 1.5M12 2v2" />
+              </svg>
+            </span>
+            <span class="brand__name">Lighthouse</span>
+          </header>
+
+          <h1 class="auth-title">Nice to see you again</h1>
+
+          <form id="loginForm" class="auth-form" novalidate>
+            <div class="field">
+              <label for="login" class="field__label">Login</label>
+              <input
+                id="login"
+                name="login"
+                type="text"
+                class="field__input"
+                placeholder="Email or phone number"
+                autocomplete="username"
+              />
+            </div>
+
+            <div class="field">
+              <label for="password" class="field__label">Password</label>
+              <div class="password-box">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  class="field__input password-box__input"
+                  placeholder="Enter password"
+                  autocomplete="current-password"
+                />
+                <button
+                  type="button"
+                  id="togglePassword"
+                  class="password-box__toggle"
+                  aria-label="Show password"
+                  aria-pressed="false"
+                >
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="form-meta">
+              <label class="switch">
+                <input type="checkbox" id="rememberMe" class="switch__input" />
+                <span class="switch__slider" aria-hidden="true"></span>
+                <span class="switch__label">Remember me</span>
+              </label>
+              <a href="#forgot" id="forgotLink" class="link">Forgot password?</a>
+            </div>
+
+            <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+
+            <button type="submit" class="btn btn--primary">Sign in</button>
+
+            <button type="button" id="googleSignIn" class="btn btn--dark">
+              <span class="google-g" aria-hidden="true">G</span>
+              <span>Or sign in with Google</span>
+            </button>
+
+            <button type="button" id="signUpBtn" class="btn btn--primary">Sign up</button>
+
+            <p class="signup-hint">
+              Dont have an account?
+              <a href="#signup" id="signUpLink" class="link">Sign up now</a>
+            </p>
+          </form>
+        </div>
+
+        <footer class="auth-footer">© Perfect Login 2021</footer>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
